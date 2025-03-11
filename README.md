@@ -9,7 +9,7 @@
 <br/>
 🎉 **OfficeChunker** instantly converts your Microsoft Office documents (Pdf, Word, PowerPoint, Excel) into clear and structured Markdown files. It neatly parses and chunks your files, making them perfect for LLM training, RAG applications, and building knowledge bases—fast and hassle-free! 🚀
 <br/>
-<br/>
+
 
 ### 🌟 Why you'll love OfficeChunker:
 
@@ -19,8 +19,6 @@
 - **🧙 Per-File-Type Magic!** Apply different chunking strategies for each type of file. Excel needs different treatment from Word? Easy peasy!
 - **🎛️ Fine-Tune Your Chunks!** Adjust chunk size and overlaps exactly how you want. No more awkward splits!
 <br/>
-<br/>
-
 
 ### 🎯 What can you do with OfficeChunker?
 
@@ -29,7 +27,6 @@ OfficeChunker is perfect for:
 - **🧠 RAG (Retrieval-Augmented Generation)**: Feed clean, organized chunks into your favorite RAG pipeline for smarter, context-rich responses!
 - **🤖 LLM Training and Fine-tuning**: Improve your Language Model training workflows by converting noisy office documents into structured, easy-to-process Markdown.
 - **📚 Knowledge Base Creation**: Transform company documentation into neatly chunked Markdown files for easy integration with documentation or knowledge management systems.
-<br/>
 <br/>
 
 ### 🚀 Quickstart Example:
@@ -49,6 +46,10 @@ converter.convert()
 ```
 
 You can also use CLI environment. Check below!  
+```bash
+officechunker ./src_dst
+```
+
 Now you're all set to turn your office files from dull to delightful! 🎊 Happy Chunking!
 
 
@@ -81,12 +82,10 @@ Now you're all set to turn your office files from dull to delightful! 🎊 Happy
   - [5. Conclusion](#5-conclusion)
 
 ---
-<br/>
-<br/>
+
 
 ## 1. Overall Architecture
 ![alt text](./assets/image-2.png)
-<br/>
 <br/>
 
 
@@ -94,7 +93,6 @@ Now you're all set to turn your office files from dull to delightful! 🎊 Happy
 ## 2. Using OfficeChunker in Python Code
 
 OfficeChunker can be directly integrated into your Python projects. Below are various usage examples that cover different scenarios.
-<br/>
 <br/>
 
 ### a. Default Parameters
@@ -119,7 +117,7 @@ converter.convert()
 
 ---
 <br/>
-<br/>
+
 
 ### b. Single Chunker for All Files
 
@@ -142,7 +140,7 @@ converter.convert()
 
 ---
 <br/>
-<br/>
+
 ### c. Custom Chunker Mapping
 
 Define different chunking methods for each file extension by supplying a mapping.
@@ -173,7 +171,7 @@ converter.convert()
 
 ---
 <br/>
-<br/>
+
 ### d. Custom Chunker Mapping with Parameters
 
 For additional control, specify not only the chunker type but also parameters like `chunk_size` and `chunk_overlap`.
@@ -204,7 +202,7 @@ converter.convert()
 
 ---
 <br/>
-<br/>
+
 ### e. Mixed Chunker Configuration
 
 Mix default settings with custom configurations for specific file types.
@@ -231,7 +229,7 @@ converter.convert()
 
 ---
 <br/>
-<br/>
+
 ## 3. Using OfficeChunker via the CLI
 
 OfficeChunker also provides a Command Line Interface (CLI) for users who prefer running conversions directly from the terminal.
@@ -268,7 +266,7 @@ When using the CLI, the following options are available:
 
 ---
 <br/>
-<br/>
+
 
 ### Example CLI Commands  
 > Download the officechunker before u use the CLI Commands
@@ -316,7 +314,6 @@ officechunker /path/to/source_folder \
 
 ---
 <br/>
-<br/>
 
 
 ## 4. Supported Chunkers and Parameters
@@ -334,7 +331,7 @@ Here's a detailed **English** table summarizing all available chunkers in **Offi
 | **late**     | Latent topic embedding-based chunking, groups sentences based on inferred latent topics. | `embedding_model` (default: `all-MiniLM-L6-v2`)<br>`mode` (default: `sentence`)<br>`chunk_size` (default: 512)<br>`min_sentences_per_chunk` (default: 1)<br>`min_characters_per_sentence` (default: 12) |
 
 ---
-
+<br/>
 
 
 ## 5. Conclusion
